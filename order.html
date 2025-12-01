@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Service - Ventured Skies LLC</title>
+  <meta name="description" content="Book a drone service with Ventured Skies.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/screen.css" media="screen">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand-bar">
+      <div class="logo-wrap">
+        <img src="media/Ventured Skies Logo.png" alt="Ventured Skies Logo" class="logo" style="height:40px; width: 40px;">
+        <div class="site-title">VENTURED SKIES</div>
+      </div>
+      <div class="mobile-toggle">☰</div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="ourServices.html">Services</a></li>
+          <li><a href="contactUs.html" class="active">Contact</a></li>
+          <li><a href="order.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page hero-bg-order">
+    <div class="hero-overlay">
+      <h1>Start Your Mission</h1>
+      <div class="underline"></div>
+    </div>
+  </section>
+
+  <main>
+    
+    <div class="form-wrapper">
+      <div class="form-header">
+        <h2>Service Request Form</h2>
+        <p>Tell us about your project, and we will build a flight plan.</p>
+      </div>
+
+      <form name="signupForm" id="signupForm" 
+            action="https://lisabalbach.com/CIT180/Lesson8/FormProcessor.html" 
+            method="get" class="styled-form">
+
+        <input type="hidden" name="mailto" id="mailto" value="mailto:yourname@email.com">
+
+        <fieldset>
+          <legend>01. Client Details</legend>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required placeholder="John Doe">
+          </div>
+
+          <div class="form-row">
+             <div class="form-group half">
+               <label for="email">Email</label>
+               <input id="email" name="email" type="email" required placeholder="name@example.com">
+             </div>
+             <div class="form-group half">
+               <label for="telephone">Phone</label>
+               <input id="telephone" name="telephone" type="tel" required placeholder="(555) 123-4567">
+             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Billing Address</label>
+            <input id="address" name="address" type="text" placeholder="1234 Drone Way">
+          </div>
+
+          <div class="form-row three-col">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input id="city" name="city" type="text">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input id="state" name="state" type="text">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip</label>
+              <input id="zip" name="zip" type="text">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>02. Mission Profile</legend>
+
+          <div class="form-group">
+             <label for="service">Requested Service Package</label>
+             <div class="select-wrapper">
+               <select id="service" name="service" required>
+                 <option value="" disabled selected>-- Select a Package --</option>
+                 <option value="basic">Basic ($75/hr)</option>
+                 <option value="intermediate">Intermediate ($100/hr)</option>
+                 <option value="advanced">Advanced Mapping ($200/hr)</option>
+               </select>
+             </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+               <label for="date">Target Date</label>
+               <input id="date" name="date" type="date">
+            </div>
+            <div class="form-group half">
+               <label for="location">Project Location</label>
+               <input id="location" name="location" type="text" placeholder="Site address or Coordinates">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Mission Notes / Specific Requirements</label>
+            <textarea id="notes" name="notes" rows="5" placeholder="Describe the terrain, specific shots needed, or any hazards..."></textarea>
+          </div>
+
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Launch Request</button>
+
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; Thais Grays NMC, 2025, Ventured Skies LLC.</p>
+    </div>
+  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.top-nav');
+
+    if (toggleButton && navMenu) {
+      toggleButton.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+          toggleButton.textContent = '✕';
+        } else {
+          toggleButton.textContent = '☰';
+        }
+      });
+    } else {
+      console.log("Error: Could not find .mobile-toggle or .top-nav in HTML");
+    }
+  });
+</script>
+</body>
+</html>

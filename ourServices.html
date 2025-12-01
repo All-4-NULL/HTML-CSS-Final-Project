@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Services - Ventured Skies LLC</title>
+  <meta name="description" content="Drone Service Packages: Photography, Videography, and Mapping.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/screen.css" media="screen">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand-bar">
+      <div class="logo-wrap">
+        <img src="media/Ventured Skies Logo.png" alt="Ventured Skies Logo" class="logo" style="height:40px; width:40px;">
+        <div class="site-title">VENTURED SKIES</div>
+      </div>
+      <div class="mobile-toggle">☰</div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="ourServices.html">Services</a></li>
+          <li><a href="contactUs.html" class="active">Contact</a></li>
+          <li><a href="order.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page hero-bg-3">
+    <div class="hero-overlay">
+      <h1>Our Packages</h1>
+      <div class="underline"></div>
+      <p class="hero-sub">Scalable solutions for every mission.</p>
+    </div>
+  </section>
+
+  <main>
+    
+    <div class="intro-text-center">
+      <h2>Select Your Tier</h2>
+      <p>From quick aerial snapshots to advanced 3D mapping, we have a flight plan that fits your needs.</p>
+    </div>
+
+    <div class="pricing-grid">
+      
+      <div class="pricing-card tier-1">
+        <div class="card-header">
+          <h3>Basic</h3>
+          <div class="price">$75<span>/hr</span></div>
+          <p class="travel-note">+ Travel Expenses</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>✔ 1 Hour Flight Time</li>
+            <li>✔ Basic Photo Editing</li>
+            <li>✔ 24-48 Hr Turnaround</li>
+            <li>✔ High-Res JPEGs</li>
+          </ul>
+          <a href="Order.html" class="card-btn btn-purple">Select Basic</a>
+        </div>
+      </div>
+
+      <div class="pricing-card tier-2 featured">
+        <div class="popular-tag">MOST POPULAR</div>
+        <div class="card-header">
+          <h3>Intermediate</h3>
+          <div class="price">$100<span>/hr</span></div>
+          <p class="travel-note">+ Travel Expenses</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>✔ Professional Presentations</li>
+            <li>✔ Edited Photos & Video</li>
+            <li>✔ Color Grading Included</li>
+            <li>✔ Ideal for Real Estate</li>
+          </ul>
+          <a href="Order.html" class="card-btn btn-orange">Select Intermediate</a>
+        </div>
+      </div>
+
+      <div class="pricing-card tier-3">
+        <div class="card-header">
+          <h3>Advanced</h3>
+          <div class="price">$200<span>/hr</span></div>
+          <p class="travel-note">+ Travel Expenses</p>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>✔ 3D Modeling & Mapping</li>
+            <li>✔ Topographic Surveys</li>
+            <li>✔ Construction Monitoring</li>
+            <li>✔ Raw Data Deliverables</li>
+          </ul>
+          <a href="Order.html" class="card-btn btn-yellow">Select Advanced</a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ventured Skies LLC.</p>
+          <div>
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/profile.php?id=61559204951156#" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i> FB
+                </a>
+                <a href="https://www.instagram.com/venturedskies_llc/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> IG                </a>
+                <a href="https://www.youtube.com/@VenturedSkiesLLC" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>YT
+              </a>
+          </div>
+        </div>
+    </div>
+  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.top-nav');
+
+    if (toggleButton && navMenu) {
+      toggleButton.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+          toggleButton.textContent = '✕';
+        } else {
+          toggleButton.textContent = '☰';
+        }
+      });
+    } else {
+      console.log("Error: Could not find .mobile-toggle or .top-nav in HTML");
+    }
+  });
+</script>
+</body>
+</html>
